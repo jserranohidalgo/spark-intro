@@ -1,15 +1,24 @@
 # A crash course on Spark in Scala
 
-## Sylabus
+## Content
 
-# Set up
+The course is divided into four major modules.
+
+1. The language of Datasets
+2. The language of DataFrames
+3. Spark on AWS
+4. Spark optmizations & good practices
+
+## Set up
+
+The course is run on Jupyter notebooks. We recommend installing docker to run jupyter with Spark. Please, follow these steps to set up everything you need.
 
 1. Install docker on your machine
 
     1.1 [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
     1.2 [Windows](https://docs.docker.com/docker-for-windows/install/)
-        * If your windows is not 10 pro, install this one [Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
+        (if your windows is not 10 pro, install [this one](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
     1.3 [MAC](https://docs.docker.com/docker-for-mac/install/)
 
@@ -19,16 +28,16 @@
 
     2.2 Go to the folder where you want to download this repo
 
-    2.3 Run this command
+    2.3 Run this command:
     ```bash
     git clone https://github.com/jserranohidalgo/spark-intro.git [<nombre del proyecto>]
     ```
 
-    2.4
+    2.4 Move into your local repository
     ```bash
     cd <nombre del proyecto>
     ```
-3. Run the docker
+3. Run the docker image for Spark
 
     3.1 Make sure that docker daemon is running
 
@@ -46,9 +55,9 @@
         docker run -it --rm -p 8888:8888 -p 4040:4040 -m 4g -v {c:/path/to/downloaded/folder}:/home/jovyan/work almondsh/almond:0.9.1
         ```
 
-    It can take a while to download the images for the first time.
+    It can take a while to download the image for the first time.
 
-4. Enter in Jupyter
+4. Enter Jupyter
 
     4.1 Copy the token that is shown in the terminal
     ```
@@ -56,8 +65,7 @@
     http://(824918044eeb or 127.0.0.1):8888/?token=57c1a89124a898d1c6d4ca404445c9b54c9c6d6cfc558f9f
     ```
 
-
-    4.2 go to [localhost](http://localhost:8888) paste the token and log in.
+    4.2 Go to [localhost](http://localhost:8888), paste the token and log in.
     ![Jupyter token login](images/jupyter-token.png)
 
 5. Test Notebook
@@ -77,10 +85,16 @@
     Atention!
     ```
 
-    Make sure that you save everything previously to close Jupyter. The docker parameter `--rm`- deletes the container (the image is still in your machine), to a clean the enviroment each time you open it, but also discards all non saved changes in the notebooks.
+    Make sure that you save everything before closing Jupyter. The docker parameter `--rm`- deletes the container (the image is still in your machine), so as to get a clean enviroment each time you open it, but also discards all non saved changes in the notebooks.
 
     6.1 Go to the shell that is running the container
 
     6.2 Control + c to send a kill signal
 
     6.3 Type 'y' and enter to finish.
+
+## Acknowledgements
+
+This course owes a lot to the staff of [Habla Computing](https://hablapps.com). Particular thanks to Mikel San Vicente and Alfonso Roa.
+
+
