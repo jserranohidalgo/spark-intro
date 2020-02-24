@@ -1,3 +1,10 @@
+[comment]: # (Start Badges)
+
+[![Gitter](https://badges.gitter.im/tfgs-functionalprogramming-urjc/spark-tfgs.svg)](https://gitter.im/tfgs-functionalprogramming-urjc/spark-tfgs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+[comment]: # (End Badges)
+
+
 # A crash course on Spark in Scala
 
 ## Content
@@ -9,7 +16,11 @@ The course is divided into four major modules.
 3. Spark on AWS
 4. Spark optmizations & good practices
 
-## Set up
+## Chat room
+
+Join the chat room at: https://gitter.im/tfgs-functionalprogramming-urjc/spark-tfgs#share
+
+## Set up using docker
 
 The course is run on Jupyter notebooks. We recommend installing docker to run jupyter with Spark. Please, follow these steps to set up everything you need.
 
@@ -18,7 +29,7 @@ The course is run on Jupyter notebooks. We recommend installing docker to run ju
     1.1 [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
     1.2 [Windows](https://docs.docker.com/docker-for-windows/install/)
-        (if your windows is not 10 pro, install [this one](https://docs.docker.com/toolbox/toolbox_install_windows/)
+        (if your windows is not 10 pro, install [this one](https://docs.docker.com/toolbox/toolbox_install_windows/))
 
     1.3 [MAC](https://docs.docker.com/docker-for-mac/install/)
 
@@ -92,6 +103,13 @@ The course is run on Jupyter notebooks. We recommend installing docker to run ju
     6.2 Control + c to send a kill signal
 
     6.3 Type 'y' and enter to finish.
+
+## Standalone set up
+
+You can install jupyter and the Scala kernel yourself. Please follow the following instructions:
+- [Jupyter installation](https://jupyter.org/install)
+- [Scala kernel installation](https://almond.sh/docs/quick-start-install)
+
 
 ## Acknowledgements
 
