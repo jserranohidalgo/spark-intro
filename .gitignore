@@ -1,6 +1,14 @@
 MANIFEST
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.cache
+.lib/
 build
-dist
+
 _build
 docs/man/*.gz
 docs/source/api/generated
