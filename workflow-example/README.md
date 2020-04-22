@@ -44,7 +44,7 @@ input-path="s3://<my-bucket>/data/la-liga.parquet"
 output-path="s3://<my-bucket>/data/goalsPerTeam.parquet"
 ```
 
-Then, generate the jar with the pipeline to be run:
+Then, generate the jar with the pipeline to be run using [sbt](https://www.scala-sbt.org/):
 
 ```bash
 sbt clean assembly
@@ -53,7 +53,7 @@ sbt clean assembly
 and upload it to S3:
 
 ```
-aws s3 cp target/scala-2.11/spark-jupyter-assembly-0.0.1-SNAPSHOT.jar s3://<my-bucket>/jars/workflow-example-assembly-0.0.1-SNAPSHOT.jar
+aws s3 cp target/scala-2.11/workflow-example-assembly-0.0.1-SNAPSHOT.jar s3://<my-bucket>/jars/workflow-example-assembly-0.0.1-SNAPSHOT.jar
 ```
 
 ### 4. Launch an EMR cluster

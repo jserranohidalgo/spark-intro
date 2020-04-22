@@ -9,9 +9,9 @@ class TransformationsSpec extends FunSpec with DataFrameSuiteBase {
 
   import spark.implicits._
 
-  describe("A transformation") {
+  describe("Transformation `goalsPerTeam`") {
 
-    it("a dataframe is processed") {
+    it("should work") {
 
       val matchesDF = List(
         Match("Barcelona", "Real Madrid", Some(2), Some(2)),
@@ -28,8 +28,10 @@ class TransformationsSpec extends FunSpec with DataFrameSuiteBase {
 
       Transformations.goalsPerTeam(matchesDF).fold(
         fail(_),
-        obtainedDF =>
-          assertDataFrameEquals(expectedDF.sort($"team"), obtainedDF.sort($"team"))
+        (obtainedDF: DataFrame) =>
+          assertDataFrameEquals(
+            expectedDF.sort($"team"),
+            obtainedDF.sort($"team"))
       )
     }
   }

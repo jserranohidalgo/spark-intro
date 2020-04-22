@@ -2,7 +2,7 @@
 
 CLUSTER_ID=$1
 MAIN_JAR=s3://$2/jars/workflow-example-assembly-0.0.1-SNAPSHOT.jar
-PROFILE=urjc
+PROFILE=default
 
 aws emr add-steps \
   --cluster-id $CLUSTER_ID \
