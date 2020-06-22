@@ -11,3 +11,9 @@ A: Remember that everything you are doing on your Docker console it's happening 
 
 ## Q: How can I change my virtual machine characteristics (RAM, Cores, Memory,...)?
 A: You just have to set it in the Virtual Box configuration. Open the "default" machine (which is created by docker), turn it off if is running and change what you need in its configuration. After that just open docker console again. 
+
+## Known issues:
+* On Windows:
+  * During sbt [assembly](https://github.com/sbt/sbt-assembly) (Fat-Jar)
+    1. On sbt versions pre 1.3.7, assembly may create a "null" directory. [Issue](https://github.com/sbt/sbt/issues/5206)
+    2. If during the assembly, you get an `IllegalArgumentException: requirement failed: Source file 'path\META-INF\license' is a directory`, just delete the `target` directory and assembly again. [Issue](https://github.com/sbt/sbt-assembly/issues/390)
